@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>MediaPlayer</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700;900&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="vendor/green-audio-player.min.css">
+</head>
+
+<body>
+
+	<!--HEADER-->
+	<header>
+		<div class="header-wrapper">
+			<div class="header-title">
+				<h1>TASTE<br><span>ENGAGE<br>IN<br>ART</span></h1>
+			</div>
+		</div>
+
+		<!--NAVIGATION-->
+		<nav id="nav">
+			<div class="nav-wrapper">
+				<a id="home-link" href="#home">HOME</a>
+				<a id="search-link" href="#search">SEARCH</a>
+				<a id="discover-link" href="#discover">DISOVER</a>
+			</div>
+		</nav>
+	</header>
+
+	<!--PAGES-->
+	<div id="pages">
+		<section id="home">
+			<div class="home-page-wrapper "></div>
+		</section>
+		<section id="search">
+			<div class="search-page-wrapper"></div>
+		</section>
+		<section id="discover">
+			<div class="discover-page-wrapper"></div>
+		</section>
+		<section id="join">
+			<div class="join-page-wrapper"></div>
+		</section>
+	</div>
+
+	<!--PAGES/HOME-->
+	<script id="template-home-page" type="text/x-handlebars-template">
+			<div class="home-page" id="home-page">
+				<div class="home-play-list"></div>
+				<div class="subscribe">
+					<div class="subscribe-img">
+						<img src="./images/subscribe.jpg" alt="subscribe">
+					</div>
+					<h2 class="subscribe-header">subscribe now</h2>
+					<a class="join-link" href="#join">
+						<button class="subscribe-button">join now</button>
+					</a>
+					<div class="artist">
+						<div class="artist-name">
+							<div class="artist-name-top">
+								<p>dean</p>
+							</div>
+							<div class="artist-name-bottom">
+								<p>Hen<span>son</span></p>
+							</div>
+						</div>
+						<div class="artist-img">
+							<img src="./images/artist.jpg" alt="artist">
+						</div>
+						<div class="artist-description">
+							<p><span>NEW ALBUM<br></span> Available only for subscribers</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</script>
+
+	<!--PAGES/SEARCH-->
+	<script id="template-search-page" type="text/x-handlebars-template">
+			<div class="search-page">
+				<h2 class="search-page-header">search</h2>
+				<div class="search-form">
+					<p>name</p>
+					<form>
+						<input type="text">
+						<button class="search-button" type="submit">search</button>
+					</form>
+				</div>
+				<h3></h3>
+				<div class="search-resuls">
+					<div class="search-song"></div>
+				</div>
+			</div>
+		</script>
+
+	<!--PAGES/DISCOVER-->
+	<script id="template-discover-page" type="text/x-handlebars-template">
+			<div class="discover-page">
+				<h2 class="discover-page-header">discover</h2>
+				<h3>give it a try!</h3>
+				<div class="random-song"></div>
+			</div>
+		</script>
+
+	<!--PAGES/JOIN-->
+	<script id="template-join-page" type="text/x-handlebars-template">
+			<h2 class="join-header">join now</h2>
+		</script>
+
+	<!--FOOTER-->
+	<section class="footer">
+		All rights reserved
+	</section>
+
+	<!--AUDIO-PLAYER-->
+	<script id="template-audio-player" type="text/x-handlebars-template">
+		<div class="player">
+			<div class="song-name">{{author}}-{{title}}</div>
+				<audio>
+				<source src="songs/{{filename}}" type="audio/mpeg">
+				</audio>
+			<div class="details">
+				<div class="song-categories">
+					<p class="categories">
+						categories: {{categories}}
+					</p>
+				</div>
+				<div class="song-ranking">
+					<p class="ranking">
+						#<span>{{ranking}}</span> in the ranking
+					</p>
+				</div>
+			</div>
+		</div>
+	</script>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
+	<script src="vendor/green-audio-player.min.js"></script>
+	<script src="js/app.js" type="module"></script>
+</body>
+
+</html>

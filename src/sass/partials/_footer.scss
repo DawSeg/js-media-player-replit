@@ -1,0 +1,16 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $color-black;
+  height: 80px;
+  letter-spacing: 3px;
+  font-size: 21px;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    font-size: 10px;
+    height: 32px;
+  }
+}

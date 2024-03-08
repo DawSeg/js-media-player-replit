@@ -1,0 +1,134 @@
+.green-audio-player {
+  width: 550px !important;
+  height: 70px !important;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  margin-top: 180px;
+  margin-bottom: 215px;
+
+  .slider {
+    width: 320px;
+
+    .gap-progress {
+      background-color: $color-red !important;
+    }
+
+    .progress__pin {
+      background-color: $color-red !important;
+    }
+  }
+
+  .volume__button {
+    &.open {
+      path {
+        fill: $color-red !important;
+      }
+    }
+  }
+
+  .volume__pin {
+    background-color: $color-red !important;
+  }
+}
+
+.details {
+  position: relative;
+  text-align: center;
+  top: 110%;
+  left: -85%;
+  color: $color-grey;
+  font-size: 19px;
+  font-weight: $font-semibold;
+  width: 550px;
+}
+
+.song-categories {
+  position: absolute;
+  left: -50%;
+  font-weight: 400;
+  letter-spacing: 2px;
+  white-space: nowrap;
+
+  a {
+    text-decoration: none;
+    color: $color-grey;
+
+    &:hover {
+      color: $color-red;
+    }
+  }
+}
+
+.song-ranking {
+  position: relative;
+  right: -150%;
+  font-weight: 400;
+  letter-spacing: 2px;
+  white-space: nowrap;
+}
+
+.song-name {
+  position: absolute;
+  top: -110%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  white-space: nowrap;
+  font-size: 30px;
+  font-weight: $font-semibold;
+  letter-spacing: 2px;
+}
+
+.active {
+  color: $color-light;
+}
+
+@media (max-width: 768px) {
+  .song-name {
+    max-width: 100%;
+    text-overflow: ellipsis;
+    font-size: 24px;
+    top: -70%;
+    overflow: hidden;
+  }
+
+  .details {
+    top: auto;
+    left: -100%;
+
+    .song-categories {
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .song-ranking {
+      display: none;
+    }
+  }
+
+  .green-audio-player {
+    height: 40px !important;
+    width: 320px !important;
+    margin-top: 120px;
+    margin-bottom: 120px;
+
+    .slider {
+      width: 135px !important;
+    }
+
+    .volume {
+      display: none !important;
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .song-name {
+    top: -80%;
+  }
+
+  .green-audio-player {
+    height: 50px !important;
+    margin-bottom: 100px;
+  }
+}

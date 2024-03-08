@@ -1,0 +1,33 @@
+.discover-page {
+  text-align: center;
+
+  .discover-page-header {
+    font-size: 60px;
+    margin-bottom: 30px;
+    color: $color-grey;
+    font-weight: $font-semibold;
+  }
+
+  h3 {
+    font-size: 30px;
+    letter-spacing: 5px;
+    margin-bottom: 72px;
+  }
+}
+
+@media (max-width: 768px) {
+  .discover-page {
+    position: relative;
+
+    .discover-page-header {
+      font-size: 36px;
+      letter-spacing: 6px;
+      margin: 20px;
+    }
+
+    h3 {
+      margin: 0;
+      font-size: 21px;
+    }
+  }
+}
