@@ -8,7 +8,7 @@ import JoinPage from './components/joinPage.js';
 const app = {
   initPages: function () {
     const thisApp = this;
-
+//test
     thisApp.pages = document.querySelector(select.containerOf.pages).children;
     thisApp.navLinks = document.querySelectorAll(select.nav.links);
     const idFromhash = window.location.hash.replace('#/', '');
